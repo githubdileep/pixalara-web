@@ -1,0 +1,310 @@
+/* Color Variables based on your logo */
+:root {
+    --color-primary: #00FFFF; /* Neon Cyan/Blue */
+    --color-secondary: #FF00FF; /* Electric Magenta/Pink */
+    --color-background: #000000;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+/* Global Reset and Background Setup */
+body {
+    background-color: var(--color-background);
+    color: white;
+    font-family: var(--font-stack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Crucial for clean background animation */
+    text-align: center;
+}
+
+.content-container {
+    position: relative;
+    z-index: 10; /* Ensures content is above the animation */
+    padding: 20px;
+}
+
+/* --- Typography --- */
+.logo-text {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    /* Gradient text effect mimicking the logo icon */
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.coming-soon h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.coming-soon p {
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+/* --- Countdown Timer --- */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.countdown-unit span {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+/* --- Newsletter Form --- */
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+}
+.subscribe-form input {
+    padding: 15px 20px;
+    width: 300px;
+    max-width: 80%;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.subscribe-form button {
+    padding: 15px 25px;
+    border: none;
+    background: var(--color-secondary);
+    color: var(--color-background);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s ease;
+}
+.subscribe-form button:hover {
+    background: var(--color-primary);
+}
+
+
+/* ======================================= */
+/* --- BEST ANIMATIONS: FLOATING PIXELS --- */
+/* ======================================= */
+
+.nebula-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Default style for all floating shapes (Cyan/Blue primary) */
+.nebula-bg div {
+    position: absolute;
+    display: block;
+    width: 30px; /* Increased base size for visibility */
+    height: 30px; /* Increased base size for visibility */
+    background: rgba(0, 255, 255, 0.5); /* Base opacity Cyan */
+    
+    /* ADDED NEON GLOW EFFECT */
+    box-shadow: 0 0 15px 5px var(--color-primary), 
+                0 0 25px 10px rgba(0, 255, 255, 0.5); 
+
+    animation: animate 10s linear infinite;
+    bottom: -150px; 
+}
+
+/* Customizing the 10 squares with different sizes, colors, and speeds */
+
+.nebula-bg div:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.nebula-bg div:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 0, 255, 0.5); /* Magenta */
+    box-shadow: 0 0 15px 5px var(--color-secondary), 
+                0 0 25px 10px rgba(255, 0, 255, 0.5); /* Secondary Magenta Glow */
+    animation-delay: 2s;
+    animation-duration: 6s;
+}
+
+.nebula-bg div:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.nebula-bg div:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 0, 255, 0.5); /* Magenta */
+    box-shadow: 0 0 15px 5px var(--color-secondary), 
+                0 0 25px 10px rgba(255, 0, 255, 0.5); /* Secondary Magenta Glow */
+    animation-delay: 0s;
+    animation-duration: 9s;
+}
+
+.nebula-bg div:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.nebula-bg div:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.nebula-bg div:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 3s;
+}
+
+.nebula-bg div:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 0, 255, 0.5); /* Magenta */
+    box-shadow: 0 0 15px 5px var(--color-secondary), 
+                0 0 25px 10px rgba(255, 0, 255, 0.5); /* Secondary Magenta Glow */
+    animation-delay: 5s;
+    animation-duration: 10s;
+}
+
+.nebula-bg div:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+
+.nebula-bg div:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 3s;
+}
+
+/* Keyframe for the floating animation */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg); /* Float upward and spin slowly */
+        opacity: 0.3;
+    }
+}
+
+/* ===================================== */
+/* --- NEON THANK YOU MODAL STYLES --- */
+/* ===================================== */
+
+.modal-overlay {
+    /* Hide the modal by default */
+    visibility: hidden; 
+    opacity: 0;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--color-background);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    
+    /* Neon Glow Border Effect */
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 0 15px 5px var(--color-secondary), 
+                0 0 30px 15px rgba(255, 0, 255, 0.4); 
+    
+    /* Initial state for animation */
+    transform: scale(0.8) translateY(-50px);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Springy animation */
+}
+
+.modal-overlay.show .modal-content {
+    /* Final state for animation */
+    transform: scale(1) translateY(0);
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    /* Use Primary color for title contrast */
+    color: var(--color-primary); 
+    text-shadow: 0 0 5px var(--color-primary);
+}
+
+.modal-button {
+    margin-top: 25px;
+    padding: 10px 25px;
+    background: var(--color-secondary);
+    color: var(--color-background);
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Subtle button glow */
+    box-shadow: 0 0 5px rgba(255, 0, 255, 0.8);
+}
+
+.modal-button:hover {
+    background: var(--color-primary);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.9);
+}
