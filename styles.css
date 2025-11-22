@@ -276,6 +276,7 @@ body {
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Springy animation */
 }
 
+
 .modal-overlay.show .modal-content {
     /* Final state for animation */
     transform: scale(1) translateY(0);
@@ -307,4 +308,72 @@ body {
 .modal-button:hover {
     background: var(--color-primary);
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.9);
+}
+
+
+/* ===================================== */
+/* --- MOBILE RESPONSIVENESS (Max 600px) --- */
+/* ===================================== */
+
+@media (max-width: 600px) {
+
+    /* --- General Content Sizing --- */
+    .content-container {
+        padding: 20px 10px; /* Reduced side padding */
+    }
+
+    /* --- Logo and Titles --- */
+    .logo-text {
+        font-size: 2.2rem; /* Smaller logo text */
+        letter-spacing: 3px;
+    }
+
+    .coming-soon h2 {
+        font-size: 1.3rem; /* Smaller main title */
+    }
+    .coming-soon p {
+        font-size: 0.9rem; /* Smaller subtitle */
+        margin-bottom: 25px;
+    }
+
+    /* --- Countdown Timer Adjustment --- */
+    .countdown {
+        gap: 15px; /* Reduced space between timer units */
+        margin-bottom: 30px;
+    }
+
+    .countdown-unit span {
+        font-size: 2rem; /* Significantly smaller numbers */
+    }
+
+    .countdown-unit {
+        font-size: 0.7rem; /* Smaller 'DAYS', 'HOURS', etc. text */
+    }
+
+    /* --- Form Adjustment --- */
+    .subscribe-form {
+        flex-direction: column; /* Stacks input and button vertically */
+        align-items: center;
+        width: 100%;
+    }
+    
+    .subscribe-form input {
+        width: 90%; /* Input takes up most of the width */
+        max-width: 350px;
+        border-radius: 5px; /* Rounded corners on all sides */
+        margin-bottom: 10px; /* Space above the button */
+        text-align: center;
+    }
+    
+    .subscribe-form button {
+        width: 90%; /* Button matches input width */
+        max-width: 350px;
+        border-radius: 5px; /* Rounded corners on all sides */
+    }
+
+    /* --- Modal Adjustments --- */
+    .modal-content {
+        padding: 30px 15px;
+        max-width: 90%;
+    }
 }
