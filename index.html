@@ -47,18 +47,19 @@
         ::selection { background-color: #d946ef; color: white; }
     </style>
 </head>
-<body class="bg-[#090720] text-white min-h-screen relative selection:bg-fuchsia-500 selection:text-white">
+<body class="bg-[#0f0c29] text-white min-h-screen relative selection:bg-fuchsia-500 selection:text-white">
 
-    <!-- Dynamic Background Elements (Parallax Layer) -->
-    <div id="parallax-bg" class="fixed inset-0 z-0 opacity-50 pointer-events-none transition-transform duration-100 ease-out">
-        <div class="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] bg-fuchsia-600/20 rounded-full blur-[150px] animate-pulse"></div>
-        <div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-cyan-500/15 rounded-full blur-[120px]"></div>
-        <div class="absolute top-[30%] left-[-10%] w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-[100px]"></div>
-        <div class="absolute bottom-[10%] right-[10%] w-[300px] h-[300px] bg-purple-600/15 rounded-full blur-[80px]"></div>
+    <!-- Dynamic Background Elements - SMOOTH GRADIENT LIKE BANNER -->
+    <div id="parallax-bg" class="fixed inset-0 z-0 pointer-events-none">
+        <!-- Main Radial Gradient (Replaces old blobs) -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,#3b0764_0%,#1e1b4b_50%,#0f0c29_100%)] opacity-80"></div>
+        
+        <!-- Subtle animated overlay elements -->
+        <div class="absolute bottom-[-20%] left-[-20%] w-[800px] h-[800px] bg-cyan-900/10 rounded-full blur-[120px] animate-pulse"></div>
     </div>
 
     <!-- Noise Overlay -->
-    <div class="fixed inset-0 z-0 opacity-10 pointer-events-none" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
+    <div class="fixed inset-0 z-0 opacity-[0.04] pointer-events-none" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
 
     <!-- Main Content -->
     <div class="relative z-10 container mx-auto px-6 min-h-[100dvh] flex flex-col justify-between pt-8 pb-8 md:pt-12 md:pb-12">
@@ -114,10 +115,15 @@
                     <a href="https://www.linkedin.com/company/pixalara/" target="_blank" class="text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-blue-500">
                         <i data-lucide="linkedin" class="w-7 h-7"></i>
                     </a>
-                    <!-- Twitter/X -->
-                    <a href="https://x.com/pixalara" target="_blank" class="text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-cyan-400">
-                        <i data-lucide="twitter" class="w-7 h-7"></i>
+                    
+                    <!-- X (formerly Twitter) - UPDATED -->
+                    <a href="https://x.com/pixalara" target="_blank" class="text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-white">
+                        <!-- X Logo SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
                     </a>
+                    
                     <!-- Instagram -->
                     <a href="https://www.instagram.com/pixalara/" target="_blank" class="text-slate-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 hover:text-pink-500">
                         <i data-lucide="instagram" class="w-7 h-7"></i>
